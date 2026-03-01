@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thanks for Booking a Demo — Home Builder Portal"
+  description="Your demo request has been received. We'll reach out within one business day to schedule your walkthrough of Home Builder Portal."
+>
+  <section class="min-h-screen py-24 px-6 bg-gray-50 flex items-center">
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Checkmark icon -->
+      <div
+        class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8"
+      >
+        <svg
+          class="w-10 h-10 text-green-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2.5"
+            d="M5 13l4 4L19 7"
+          >
+          </path>
+        </svg>
+      </div>
+
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
+        You're on the list.
+      </h1>
+
+      <p class="text-gray-600 text-lg leading-relaxed mb-10">
+        Thanks for requesting a demo of Home Builder Portal. We've received your info and will be
+        in touch within one business day to schedule your 30-minute walkthrough.
+      </p>
+
+      <!-- Next steps -->
+      <div
+        class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-left mb-10"
+      >
+        <h2 class="font-heading font-bold text-primary text-lg mb-5">What happens next:</h2>
+        <ol class="flex flex-col gap-4">
+          {
+            [
+              "You'll receive a confirmation email to the address you provided.",
+              "We'll reach out within one business day to find a time that works for your schedule.",
+              "In your 30-minute demo, we'll walk through the full platform — the team experience and the buyer experience — and answer any questions you have.",
+            ].map((step, i) => (
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <span class="text-gray-600 text-sm leading-relaxed">{step}</span>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <a
+        href="/"
+        class="bg-accent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-block"
+      >
+        ← Back to Home
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DemoForm from '../components/DemoForm.astro';
+
+const features = [
+  {
+    name: 'Branded Buyer Portal',
+    tagline: 'Your brand. Their experience.',
+    icon: '🏠',
+    body: [
+      "Your buyers don't log into a generic construction tool. They log into your portal — built with your logo, your colors, and your brand identity throughout.",
+      "From the first notification to the final walkthrough, every touchpoint reflects the company you've built. For buyers making the largest purchase of their lives, that level of polish and care matters. It's the difference between feeling like a customer and feeling like a priority.",
+    ],
+    points: [
+      'Fully branded with your logo and color palette',
+      'Buyers see your brand — not a third-party tool name',
+      'Reinforces your premium market positioning at every interaction',
+      'Clean, intuitive interface designed to feel familiar on any device',
+    ],
+  },
+  {
+    name: 'Field Photo & Video Updates',
+    tagline: 'Every milestone, shared in under a minute.',
+    icon: '📸',
+    body: [
+      "Turn every stage of construction into a moment your buyers remember. Your team — whether a site superintendent, a sales manager, or any assigned team member — can snap a photo or record a quick video and have it posted to your buyer's portal in under 60 seconds.",
+      "No complex systems. No time-consuming reports. Just a fast, simple update that keeps buyers in the loop and makes them feel like they're part of the build.",
+    ],
+    points: [
+      'Post photos and videos directly from a phone, from anywhere',
+      "Updates appear instantly in the buyer's portal",
+      'Captions and context added in seconds',
+      "Every update adds to a running visual timeline of the home's construction journey",
+      'Buyers can open their portal anytime to see where their home stands',
+    ],
+  },
+  {
+    name: 'Message Templates',
+    tagline: 'Consistent updates. Polished communication. Every time.',
+    icon: '📝',
+    body: [
+      "Not every team member is a natural communicator — and they shouldn't have to be. Pre-built message templates mean that common updates (framing complete, drywall started, final walk scheduled, keys ready) go out fast and sound professional every time, regardless of who on your team sends them.",
+      "Templates eliminate the blank-page problem, reduce errors, and ensure your buyers get the same great communication experience whether the update comes from a site super, a sales manager, or a company admin.",
+    ],
+    points: [
+      'Pre-built templates for every common construction milestone',
+      "Customizable to fit your company's voice and terminology",
+      'Ensures consistent, on-brand communication across the entire team',
+      'Post in seconds — no writing from scratch, no wondering what to say',
+      'Reduces communication errors and inconsistency across communities',
+    ],
+  },
+  {
+    name: 'File Vault',
+    tagline: 'Every important document. One place. Always accessible.',
+    icon: '📁',
+    body: [
+      "Contracts. Selection sheets. Warranty information. HOA documents. Change orders. Your buyers need access to these throughout construction — and right now, they're scattered across email threads and file-sharing links that expire.",
+      "The File Vault gives every buyer a secure, organized home for every document related to their purchase. Upload once, and your buyers can access what they need at any time — without calling your office.",
+    ],
+    points: [
+      "Upload and organize documents directly within each buyer's portal",
+      'Buyers access their documents anytime, from any device',
+      'Eliminates "where is my ____?" calls to your office and sales team',
+      'Supports contracts, selections, warranty docs, HOA packets, and more',
+      'Documents are organized by buyer home — no cross-contamination',
+    ],
+  },
+  {
+    name: 'Public Share Links',
+    tagline: 'Buyers share their home. Your brand reaches everyone they know.',
+    icon: '🔗',
+    body: [
+      "Here's something most builders overlook: the moment a buyer is most excited about their new home isn't at closing. It's during construction — when they can see the walls going up, the floors going in, and their future taking shape.",
+      'Home Builder Portal gives every buyer a public share link to their construction timeline. They send it to their parents, siblings, friends, and coworkers. "Here\'s what they\'re building for us." Every time someone clicks that link, they\'re introduced to your brand by one of your happiest customers.',
+    ],
+    points: [
+      'Every buyer automatically gets a public share link to their construction timeline',
+      'Shared links are mobile-optimized and viewable without an account',
+      'Family and friends see your brand, your updates, and your craftsmanship',
+      'Generates warm referrals during construction — before closing day',
+      'Turns excited buyers into your most credible, authentic marketing channel',
+    ],
+  },
+  {
+    name: 'Multi-Home Management',
+    tagline: 'One dashboard. Every home. Every community.',
+    icon: '📊',
+    body: [
+      "Whether your team is managing a single community or hundreds of homes across multiple developments, Home Builder Portal scales with you. Admins see every active home in a unified dashboard — no switching between tools, no maintaining separate spreadsheets, no hunting for status updates across email threads.",
+      "Assign team members to specific homes, track the status of updates, and ensure no buyer goes more than a few days without a touchpoint. As your company grows, the platform grows with you — without adding operational complexity.",
+    ],
+    points: [
+      'Single dashboard for all active homes and communities',
+      'Assign team members to specific homes or communities',
+      'Track update frequency and buyer portal activity across your portfolio',
+      'Scales from a single community to hundreds of homes',
+      'Designed for companies at every stage of growth',
+    ],
+  },
+  {
+    name: 'Mobile-First, App-Like Experience',
+    tagline: 'Works on any device. No app download required.',
+    icon: '📱',
+    body: [
+      "Your field team shouldn't have to be at a desk to keep buyers informed — and your buyers shouldn't have to download anything to check on their home. Home Builder Portal is built mobile-first, delivering an app-like experience directly in the browser.",
+      'Your team posts updates from their phone at the job site. Your buyers add the portal to their home screen and open it like an app. No app store. No version updates. No "my team won\'t download it." Just a fast, polished experience on any device.',
+    ],
+    points: [
+      'Mobile-first design that works seamlessly on phones, tablets, and desktops',
+      'No app store download required for buyers or team members',
+      'Buyers can add the portal to their home screen for instant access',
+      'Fast-loading, designed to meet modern web performance standards',
+      'Works on iOS and Android without platform-specific configuration',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Home Builder Portal Features — Buyer Communication Built for Builders"
+  description="Branded buyer portals, field photo posting, message templates, file vault, share links, and multi-home management. See every feature of Home Builder Portal."
+>
+  <!-- ═══ INTRO ═══ -->
+  <section class="py-24 px-6 bg-primary">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+        Every Feature Your Team Needs to Keep Buyers Informed — and Impressed
+      </h1>
+      <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+        Home Builder Portal is built around a simple idea: your buyers should always know what's
+        happening with their home. Every feature on this page exists to make that easier for your
+        team and better for your buyers.
+      </p>
+      <a
+        href="/demo"
+        class="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block shadow-lg"
+      >
+        Book a Demo — See It Live
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURES ═══ -->
+  {
+    features.map((feature, i) => (
+      <section class={`py-20 px-6 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-start gap-4 mb-8">
+            <span class="text-4xl" aria-hidden="true">
+              {feature.icon}
+            </span>
+            <div>
+              <h2 class="font-heading text-2xl md:text-3xl font-bold text-primary mb-1">
+                {feature.name}
+              </h2>
+              <p class="text-accent font-semibold">{feature.tagline}</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div>
+              {feature.body.map((paragraph) => (
+                <p class="text-gray-600 leading-relaxed mb-4">{paragraph}</p>
+              ))}
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+              <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">
+                Key Points
+              </h3>
+              <ul class="flex flex-col gap-3">
+                {feature.points.map((point) => (
+                  <li class="flex items-start gap-3">
+                    <span class="text-accent font-bold flex-shrink-0 mt-0.5" aria-hidden="true">
+                      ✓
+                    </span>
+                    <span class="text-gray-700 text-sm leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="py-20 px-6 bg-primary">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
+            See Every Feature in Action — Live.
+          </h2>
+          <p class="text-white/75 text-lg leading-relaxed mb-4">
+            The best way to understand Home Builder Portal is to see it from both sides: what your
+            team's day-to-day would look like, and what your buyers would actually experience. Book
+            a demo and we'll walk you through the full product in 30 minutes.
+          </p>
+          <p class="text-white/45 text-sm">
+            No commitment required. Just a live walkthrough of the platform.
+          </p>
+        </div>
+        <div>
+          <DemoForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — Home Builder Portal"
+  description="How Home Builder Portal collects, uses, and protects your information. Last updated March 2026."
+>
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="font-heading text-4xl font-bold text-primary mb-2">Privacy Policy</h1>
+      <p class="text-gray-400 text-sm mb-10">Last updated: March 1, 2026</p>
+
+      <div class="space-y-10 text-gray-600 leading-relaxed">
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">1. Who We Are</h2>
+          <p>
+            Home Builder Portal is a software-as-a-service platform for home builder companies.
+            This privacy policy applies to our marketing website at
+            <strong>www.homebuilderportal.com</strong> ("the Site"). For questions about this
+            policy, contact us at <a
+              href="mailto:hello@homebuilderportal.com"
+              class="text-accent underline">hello@homebuilderportal.com</a
+            >.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            2. Information We Collect
+          </h2>
+          <p class="mb-3">We collect information in two ways:</p>
+          <p class="mb-2">
+            <strong class="text-gray-800">Information you provide directly.</strong> When you submit
+            a demo request form on this Site, we collect your first name, last name, company name,
+            work email address, phone number (if provided), and estimated homes built per year. This
+            information is used solely to schedule and conduct your product demo.
+          </p>
+          <p>
+            <strong class="text-gray-800">Information collected automatically.</strong> When you visit
+            the Site, we may collect standard analytics data including pages visited, time on site,
+            browser type, device type, and general geographic region. This data is collected in
+            aggregate and is not linked to your personal identity.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            3. How We Use Your Information
+          </h2>
+          <ul class="flex flex-col gap-2 pl-4">
+            {
+              [
+                'To contact you and schedule your requested product demo',
+                'To send a confirmation email when you submit a demo request',
+                'To understand how visitors use our Site and improve the experience',
+                'To comply with legal obligations',
+              ].map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-accent font-bold flex-shrink-0 mt-1" aria-hidden="true">
+                    –
+                  </span>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+          <p class="mt-4">
+            We do not sell, rent, or trade your personal information to third parties.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">4. Cookies & Analytics</h2>
+          <p class="mb-3">
+            This Site uses Google Analytics 4 (GA4) to collect anonymized usage data. GA4 uses
+            cookies — small text files stored in your browser — to help us understand how visitors
+            use the Site. The data collected includes pages visited, session duration, and general
+            device/browser information. GA4 data is processed by Google in accordance with their
+            privacy policy.
+          </p>
+          <p>
+            You can opt out of Google Analytics tracking by installing the
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent underline">Google Analytics Opt-out Browser Add-on</a
+            >, or by adjusting your browser's cookie settings. Our Site will function normally
+            without analytics cookies.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            5. Third-Party Services
+          </h2>
+          <p class="mb-3">
+            We use the following third-party services to operate this Site:
+          </p>
+          <ul class="flex flex-col gap-2 pl-4">
+            {
+              [
+                'Web3Forms — processes demo request form submissions and sends confirmation emails. Your form data is transmitted to Web3Forms servers to deliver these communications.',
+                'Google Analytics — collects anonymized usage data as described above.',
+                'Google Fonts — loads typefaces from Google servers. Google may collect basic request data (IP address, browser type) when fonts are loaded.',
+                'Cloudflare Pages — hosts and serves this website.',
+              ].map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-accent font-bold flex-shrink-0 mt-1" aria-hidden="true">
+                    –
+                  </span>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">6. Data Retention</h2>
+          <p>
+            Form submission data (your name, email, company, and phone number) is retained for as
+            long as necessary to conduct your demo and any subsequent sales conversations. If you
+            are not interested in proceeding after your demo, you may request deletion of your
+            information at any time by emailing us at
+            <a href="mailto:hello@homebuilderportal.com" class="text-accent underline"
+              >hello@homebuilderportal.com</a
+            >.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">7. Your Rights</h2>
+          <p class="mb-3">
+            Depending on your location, you may have rights regarding your personal data,
+            including the right to access, correct, delete, or restrict processing of your
+            information. To exercise any of these rights, contact us at
+            <a href="mailto:hello@homebuilderportal.com" class="text-accent underline"
+              >hello@homebuilderportal.com</a
+            >.
+          </p>
+          <p>
+            We will respond to all requests within 30 days.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">8. Data Security</h2>
+          <p>
+            This Site is served over HTTPS. Form submissions are transmitted securely to our
+            form processing provider. While we take reasonable precautions to protect your
+            information, no internet transmission is completely secure.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">9. Children's Privacy</h2>
+          <p>
+            This Site is intended for business professionals and is not directed at children under
+            the age of 13. We do not knowingly collect personal information from children.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            10. Changes to This Policy
+          </h2>
+          <p>
+            We may update this Privacy Policy from time to time. When we do, we will update the
+            "Last updated" date at the top of this page. Continued use of the Site after any
+            changes constitutes acceptance of the updated policy.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">11. Contact</h2>
+          <p>
+            Questions about this Privacy Policy? Email us at
+            <a href="mailto:hello@homebuilderportal.com" class="text-accent underline"
+              >hello@homebuilderportal.com</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

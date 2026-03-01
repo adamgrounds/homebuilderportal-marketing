@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+const { title, description, icon = '✓' } = Astro.props;
+---
+
+<div
+  class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+>
+  <div
+    class="w-11 h-11 bg-accent/10 rounded-xl flex items-center justify-center mb-4 text-2xl"
+    aria-hidden="true"
+  >
+    {icon}
+  </div>
+  <h3 class="font-heading font-bold text-lg text-primary mb-2">{title}</h3>
+  <p class="text-gray-600 text-sm leading-relaxed">{description}</p>
+</div>

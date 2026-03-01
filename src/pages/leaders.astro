@@ -1,0 +1,214 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import DemoForm from '../components/DemoForm.astro';
+---
+
+<LandingLayout
+  title="Home Builder Portal for Builder Executives — Brand, Reviews & ROI"
+  description="Give buyers a 5-star experience during construction. Home Builder Portal helps executive teams differentiate their brand, earn more referrals, and scale buyer communication. Book a demo."
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-primary py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1
+        class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+      >
+        The Best Builders Don't Just Build Homes. They Create Experiences.
+      </h1>
+      <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8">
+        The builders earning five-star reviews and a steady stream of referrals have figured
+        something out: the experience your buyers have during construction is the one they
+        remember — and the one they talk about. Home Builder Portal helps you deliver that
+        experience, and turn happy buyers into your most powerful growth engine.
+      </p>
+      <a
+        href="#demo"
+        class="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block mb-3 shadow-lg"
+      >
+        Book a Demo
+      </a>
+      <p class="text-white/45 text-sm">
+        30 minutes. No commitment. See exactly what your buyers would experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ THE PROBLEM ═══ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">
+        Your Buyers Are Making the Largest Purchase of Their Lives — In the Dark.
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-5">
+        After the contract is signed, most homebuyers spend months with almost no visibility into
+        their new home's progress. They don't know what's happening. Your sales team and site
+        superintendents field a steady stream of "What's happening with my home?" calls. Every
+        call costs time your team doesn't have. Or even worse, they show up to the jobsite
+        unscheduled to see what's happening. They feel anxious instead of excited — and that
+        anxiety shows up in your reviews.
+      </p>
+      <p class="text-primary font-semibold text-lg">
+        This isn't a people problem. It's an information problem. And it's entirely solvable.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ THE OPPORTUNITY ═══ -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+        Your Competitive Advantage
+      </p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">
+        Your Competitors Are Still Using Email Threads and PDF Attachments.
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-5">
+        Buyers' expectations are set by the best consumer apps they use every day. They tap a
+        button and dinner arrives. They check an app and their package is two stops away. They
+        expect that kind of transparency from every major purchase — including the most important
+        one they'll ever make.
+      </p>
+      <p class="text-gray-600 text-lg leading-relaxed mb-5">
+        The home builders who deliver a polished, real-time buyer experience during construction
+        are the ones earning 5-star Google reviews, generating referrals before closing day, and
+        building the kind of brand reputation that makes every future sale easier.
+      </p>
+      <p class="text-gray-600 text-lg leading-relaxed">
+        Home Builder Portal gives your company that edge — with a platform that's built for your
+        brand and designed for your field team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ VALUE PROPOSITIONS ═══ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+        What Home Builder Portal Does for Your Business
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          [
+            {
+              title: 'Brand differentiation that buyers notice',
+              body: "Your buyers log into a portal branded with your logo and your colors — not a generic communication tool. Every update reinforces who you are and the experience you deliver. That's a detail that competitors using email threads simply can't match.",
+            },
+            {
+              title: 'Reviews earned during construction, not after',
+              body: "5-star reviews aren't just about the finished home. They're about how buyers felt throughout the entire process. When buyers are informed, engaged, and excited about their home's progress, they write about it — often without being asked.",
+            },
+            {
+              title: 'Referrals that start before closing day',
+              body: "Every buyer on Home Builder Portal gets a public share link to their construction timeline. They send it to family, friends, and coworkers. Those shares are warm introductions to your brand from your most credible advocates — people who are actively buying from you right now.",
+            },
+            {
+              title: 'Scalability from one community to hundreds',
+              body: 'One dashboard. Every home. Every community. Your team manages multi-site buyer communication without the overhead of fragmented email threads, text chains, or manual check-ins.',
+            },
+          ].map(({ title, body }) => (
+            <div class="border-l-4 border-accent pl-6">
+              <h3 class="font-heading font-bold text-lg text-primary mb-2">{title}</h3>
+              <p class="text-gray-600 leading-relaxed text-sm">{body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURE SUMMARY ═══ -->
+  <section class="py-20 px-6 bg-primary">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-10 text-center">
+        A Platform That Works the Way Your Team Does
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {
+          [
+            {
+              text: 'Branded buyer portal',
+              detail:
+                'Your logo and colors throughout. Premium positioning, reinforced at every touchpoint.',
+            },
+            {
+              text: 'Field updates in under a minute',
+              detail: 'Photos, videos, and milestone captions posted directly from the job site.',
+            },
+            {
+              text: 'Message templates',
+              detail:
+                'Consistent, on-brand communication across your entire team, regardless of who posts.',
+            },
+            {
+              text: 'File vault',
+              detail:
+                'Contracts, selections, and warranty docs organized in one place for buyers to access anytime.',
+            },
+            {
+              text: 'Public share links',
+              detail:
+                "Buyers share their construction progress. Organic word-of-mouth, built into the product.",
+            },
+            {
+              text: 'Multi-home management',
+              detail:
+                'One platform that scales from a single community to your entire portfolio.',
+            },
+          ].map(({ text, detail }) => (
+            <div class="flex items-start gap-3 bg-white/5 rounded-xl p-5 border border-white/10">
+              <span class="text-secondary text-xl flex-shrink-0 mt-0.5" aria-hidden="true">
+                ✓
+              </span>
+              <div>
+                <p class="text-white font-semibold mb-1">{text}</p>
+                <p class="text-white/55 text-sm">{detail}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS (EXEC) ═══ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
+        Simple Enough for the Field. Polished Enough for Your Brand.
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-5">
+        Your team posts a field update in under a minute using pre-built templates set for your
+        company. Your buyers see it instantly in their branded portal — photos, milestones, and
+        documents, all organized into a clean, real-time timeline. They share it with everyone
+        they know.
+      </p>
+      <p class="text-primary font-semibold text-lg">
+        Your team makes fewer calls. Your buyers write better reviews. Your brand stands out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA + FORM ═══ -->
+  <section id="demo" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-5 leading-tight">
+            Ready to See What Your Buyers Would Experience?
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-4">
+            A 30-minute walkthrough of the live product. No commitment required — just a look at
+            the platform your team would use and the experience your buyers would have.
+          </p>
+          <p class="text-gray-500 text-sm">
+            We'll walk you through the platform live and answer any questions about implementation,
+            setup, and fit for your team.
+          </p>
+        </div>
+        <div>
+          <DemoForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Terms of Service — Home Builder Portal"
+  description="Terms of Service for HomeBuilderPortal.com. Effective March 2026."
+>
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="font-heading text-4xl font-bold text-primary mb-2">Terms of Service</h1>
+      <p class="text-gray-400 text-sm mb-10">Effective: March 1, 2026</p>
+
+      <div class="space-y-10 text-gray-600 leading-relaxed">
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">1. About This Site</h2>
+          <p>
+            These Terms of Service ("Terms") govern your use of the Home Builder Portal marketing
+            website at <strong>www.homebuilderportal.com</strong> ("the Site"). The Site is a
+            marketing and informational resource operated by Home Builder Portal. By accessing or
+            using the Site, you agree to these Terms.
+          </p>
+          <p class="mt-3">
+            These Terms apply to this marketing website only and do not govern use of the Home
+            Builder Portal software platform itself, which is subject to a separate software
+            agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">2. Acceptable Use</h2>
+          <p class="mb-3">
+            You may use this Site for lawful purposes only. You agree not to:
+          </p>
+          <ul class="flex flex-col gap-2 pl-4">
+            {
+              [
+                'Use the Site in any way that violates applicable local, state, federal, or international laws or regulations',
+                'Submit false or misleading information through the demo request form',
+                'Attempt to gain unauthorized access to any portion of the Site or its related systems',
+                'Use automated tools to scrape, crawl, or extract data from the Site without permission',
+                'Transmit any material that is defamatory, offensive, or otherwise objectionable',
+              ].map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-accent font-bold flex-shrink-0 mt-1" aria-hidden="true">
+                    –
+                  </span>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            3. Intellectual Property
+          </h2>
+          <p>
+            All content on this Site — including text, graphics, logos, images, and code — is the
+            property of Home Builder Portal and is protected by applicable intellectual property
+            laws. You may not reproduce, distribute, modify, or create derivative works from any
+            Site content without our prior written permission.
+          </p>
+          <p class="mt-3">
+            The Home Builder Portal name, logo, and related marks are trademarks of Home Builder
+            Portal. Nothing on this Site grants any license to use our trademarks.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            4. No Warranties
+          </h2>
+          <p>
+            This Site and its content are provided "as is" and "as available" without warranties
+            of any kind, either express or implied. To the fullest extent permitted by law, Home
+            Builder Portal disclaims all warranties, including implied warranties of
+            merchantability, fitness for a particular purpose, and non-infringement.
+          </p>
+          <p class="mt-3">
+            We do not warrant that the Site will be available without interruption, error-free, or
+            free from viruses or other harmful components. Marketing materials on this Site
+            describe the Home Builder Portal platform generally and are subject to change.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">
+            5. Limitation of Liability
+          </h2>
+          <p>
+            To the maximum extent permitted by applicable law, Home Builder Portal shall not be
+            liable for any indirect, incidental, special, consequential, or punitive damages
+            arising from your use of, or inability to use, this Site — even if we have been
+            advised of the possibility of such damages.
+          </p>
+          <p class="mt-3">
+            Our total liability to you for any claims arising from your use of the Site shall not
+            exceed fifty dollars ($50).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">6. Third-Party Links</h2>
+          <p>
+            The Site may contain links to third-party websites. These links are provided for
+            convenience only. We have no control over, and assume no responsibility for, the
+            content, privacy policies, or practices of any third-party websites.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">7. Governing Law</h2>
+          <p>
+            These Terms are governed by and construed in accordance with the laws of the United
+            States, without regard to conflict of law principles. Any disputes arising from these
+            Terms or your use of the Site shall be resolved in the applicable courts of competent
+            jurisdiction.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">8. Changes to Terms</h2>
+          <p>
+            We reserve the right to update these Terms at any time. When we do, we will update
+            the "Effective" date at the top of this page. Your continued use of the Site after any
+            changes constitutes acceptance of the updated Terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-bold text-primary mb-3">9. Contact</h2>
+          <p>
+            Questions about these Terms? Contact us at
+            <a href="mailto:hello@homebuilderportal.com" class="text-accent underline"
+              >hello@homebuilderportal.com</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

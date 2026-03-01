@@ -1,0 +1,186 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import DemoForm from '../components/DemoForm.astro';
+
+const beforeAfter = [
+  ['Buyers call asking for an update', 'Buyers check their portal instead'],
+  ['You write a custom message for every buyer', 'Templates send the right update in seconds'],
+  [
+    'Review requests go ignored or unanswered',
+    'Buyers are already primed to share positive experiences',
+  ],
+  ['Referrals come from closings months later', 'Referrals start during construction'],
+  ['Updates live in ten different email threads', 'All buyer communication in one place'],
+];
+
+const features = [
+  {
+    title: 'Post Updates in Under a Minute',
+    desc: "Snap a photo, pick a template, add a caption, and post. Your buyer sees it instantly in their portal. That's it. Whether you're at the job site or the office, it's faster than sending an email — and your buyer gets a better experience.",
+  },
+  {
+    title: 'Pre-Built Message Templates',
+    desc: 'Common milestones — framing complete, drywall started, final walk scheduled — have templates ready to go. Your updates sound polished and professional every time, regardless of who on your team posts them.',
+  },
+  {
+    title: 'One Place for Every Buyer Update',
+    desc: 'No more digging through email chains or texting back-and-forth. Every update, every milestone, and every document lives in one organized timeline your buyer can access anytime. Fewer calls. Fewer follow-ups. More time in your day.',
+  },
+  {
+    title: 'Reviews That Write Themselves',
+    desc: "Happy buyers write good reviews. Informed buyers are happy buyers. When your buyers can open their portal and see exactly what's happening with their home, they feel taken care of — and that feeling doesn't fade at closing. It's what they write about on Google.",
+  },
+  {
+    title: 'Referrals During Construction, Not After',
+    desc: 'Home Builder Portal gives buyers a public share link to their construction timeline. They send it to their parents, friends, and coworkers. "Look what they\'re building for us." Every share is a warm introduction to your company from someone actively choosing you right now.',
+  },
+];
+---
+
+<LandingLayout
+  title="Home Builder Portal for Sales Managers — Fewer Calls. Better Reviews."
+  description="Stop answering 'what's happening with my home?' Post a buyer update in under a minute. Home Builder Portal keeps buyers informed so your team can focus on selling. Book a demo."
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-primary py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1
+        class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+      >
+        Imagine If Every Buyer Became a Raving Fan — Before They Even Moved In.
+      </h1>
+      <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8">
+        When buyers feel informed, included, and excited about their new home throughout
+        construction, something remarkable happens: they share it. They tell their friends. They
+        write glowing reviews. They become the kind of advocates that no ad budget can buy. Home
+        Builder Portal makes that experience possible — and makes it easy for your team to deliver
+        it every day.
+      </p>
+      <a
+        href="#demo"
+        class="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block mb-3 shadow-lg"
+      >
+        See a 20-Minute Demo
+      </a>
+      <p class="text-white/45 text-sm">
+        No commitment. See exactly what your buyers would experience — and what changes for your
+        team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ THE PROBLEM ═══ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">
+        You're Spending Hours on Calls That Shouldn't Exist.
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-5">
+        Right now, keeping a buyer updated means phone calls, email chains, and text threads
+        scattered across your phone. Buyers ask the same questions your whole team has already
+        answered. Every "what's happening with my home?" interrupts a conversation you'd rather be
+        having with a prospect.
+      </p>
+      <p class="text-primary font-semibold text-lg">
+        That's time you don't get back. And when buyers feel uninformed, it shows up in your
+        reviews.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ THE SOLUTION ═══ -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">
+        One Post. One Minute. Every Buyer, Informed.
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-5">
+        With Home Builder Portal, you post a photo or video update from your phone — using a
+        pre-built template — and your buyer sees it instantly in their personal portal. No calls.
+        No emails. No chasing.
+      </p>
+      <p class="text-primary font-semibold text-lg">
+        Your buyers know what's happening. They feel taken care of. And you get back to selling.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ BEFORE / AFTER ═══ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-10 text-center">
+        What Changes When Your Buyers Are Informed
+      </h2>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+        <table class="w-full text-left">
+          <thead>
+            <tr>
+              <th class="bg-gray-100 px-6 py-4 text-gray-500 font-semibold text-sm w-1/2"
+                >Today</th
+              >
+              <th class="bg-primary px-6 py-4 text-white font-semibold text-sm w-1/2"
+                >With Home Builder Portal</th
+              >
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {
+              beforeAfter.map(([before, after]) => (
+                <tr>
+                  <td class="px-6 py-4 text-gray-500 text-sm">{before}</td>
+                  <td class="px-6 py-4 text-gray-800 text-sm font-medium">{after}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURE BREAKDOWN ═══ -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+        Built for the Way You Actually Work
+      </h2>
+      <div class="flex flex-col gap-10">
+        {
+          features.map(({ title, desc }, i) => (
+            <div class="flex gap-5 items-start">
+              <div class="flex-shrink-0 w-11 h-11 bg-accent rounded-full flex items-center justify-center text-white font-bold shadow-sm">
+                {i + 1}
+              </div>
+              <div class="pt-0.5">
+                <h3 class="font-heading font-bold text-lg text-primary mb-2">{title}</h3>
+                <p class="text-gray-600 leading-relaxed">{desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA + FORM ═══ -->
+  <section id="demo" class="py-20 px-6 bg-primary">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
+            Less Time on Buyer Calls. More Time Selling.
+          </h2>
+          <p class="text-white/75 text-lg leading-relaxed mb-4">
+            We'll show you a 20-minute walkthrough of exactly what your buyers would experience —
+            and what your day-to-day would look like with Home Builder Portal. No commitment, no
+            pressure.
+          </p>
+          <p class="text-white/45 text-sm">Takes 20 minutes. See the full product live. Ask anything.</p>
+        </div>
+        <div>
+          <DemoForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

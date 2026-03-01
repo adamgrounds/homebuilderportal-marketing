@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DemoForm from '../components/DemoForm.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import HowItWorksStep from '../components/HowItWorksStep.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero.jpg';
+---
+
+<BaseLayout
+  title="Home Builder Portal — Keep Homebuyers Informed During Construction"
+  description="Home Builder Portal is the branded communication platform that keeps homebuyers informed and excited during construction — without adding work to your team. Book a demo."
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="relative min-h-[88vh] flex items-center overflow-hidden bg-primary">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0">
+      <Image
+        src={heroImage}
+        alt="New home under construction"
+        class="w-full h-full object-cover object-center"
+        width={1920}
+        height={1080}
+        loading="eager"
+        quality={85}
+      />
+      <div class="absolute inset-0 bg-primary/75"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40">
+      </div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-2xl">
+        <h1
+          class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+        >
+          Build Homes They'll Love. Create Experiences They'll Talk About.
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-4">
+          The best builders know that a great home isn't just built — it's experienced. Home
+          Builder Portal gives your buyers a front-row seat to one of the most exciting moments of
+          their lives, turning construction into a journey they can't wait to share with everyone
+          they know.
+        </p>
+        <p class="text-base text-secondary font-semibold mb-10">
+          More referrals. Better reviews. Buyers who become your biggest advocates — before they
+          even move in.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/demo"
+            class="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors text-center shadow-lg"
+          >
+            Book a Demo
+          </a>
+          <a
+            href="#how-it-works"
+            class="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-white hover:bg-white/10 transition-all text-center"
+          >
+            See How It Works ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TWO-SIDED VALUE ═══ -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+          Built for Both Sides of the Build
+        </p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary">
+          Your Team Posts an Update. Your Buyers Celebrate.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- For Your Team -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div
+            class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5"
+            aria-hidden="true"
+          >
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-primary mb-3">
+            Post a field update in under a minute.
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Your team sends photos, videos, and milestone updates directly from the job site —
+            using pre-built templates that keep communication consistent and on-brand, regardless
+            of who posts. Admins manage every home and community from a single dashboard. No extra
+            calls. No chasing down updates. Just one post that does the work for everyone.
+          </p>
+        </div>
+
+        <!-- For Your Buyers -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div
+            class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-5"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-primary mb-3">
+            A polished experience that earns 5-star reviews.
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Buyers log into a branded portal — your logo, your colors — and see exactly what's
+            happening with their home in real time. A visual construction timeline, milestone
+            photos, important documents, and a shareable link so they can show off their new home
+            to everyone they know. Informed buyers are excited buyers. Excited buyers write great
+            reviews.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section id="how-it-works" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+          Simple by Design
+        </p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary">
+          Three Steps to a Better Buyer Experience
+        </h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto flex flex-col gap-12">
+        <HowItWorksStep
+          number={1}
+          title="Your team posts an update"
+          description="From the job site or the office, any team member snaps a photo, adds a quick caption using a pre-built template, and taps post. Done in under a minute."
+        />
+        <HowItWorksStep
+          number={2}
+          title="Your buyers see it instantly"
+          description="Buyers open their branded portal to find a real-time update on their home's progress — photos, milestone markers, and any important documents you've shared."
+        />
+        <HowItWorksStep
+          number={3}
+          title="Buyers share. Referrals grow."
+          description="Every buyer gets a public share link for their construction timeline. They send it to family, friends, and coworkers. Those shares become warm introductions to your brand — at the moment a buyer's excitement is at its peak."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURE HIGHLIGHTS ═══ -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+          Everything Your Team Needs
+        </p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary">
+          One Platform. A Better Experience at Every Stage.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <FeatureCard
+          icon="🏠"
+          title="Branded Buyer Portal"
+          description="Your buyers see your brand — not a generic tool. The portal is built in your logo and colors, reinforcing the premium experience your company delivers from first day to closing."
+        />
+        <FeatureCard
+          icon="📸"
+          title="Field Photo & Video Updates"
+          description="Turn every construction milestone into a moment buyers remember. Post photos and videos directly from the job site in under a minute. Buyers see them instantly."
+        />
+        <FeatureCard
+          icon="📝"
+          title="Message Templates"
+          description="No more wondering what to say. Pre-built templates let your team send consistent, on-brand buyer updates in seconds — so every buyer gets the same great experience."
+        />
+        <FeatureCard
+          icon="📁"
+          title="File Vault"
+          description="Contracts, selection sheets, warranty info — all in one place. Buyers access what they need without calling your office. Your team stops hunting through email threads."
+        />
+        <FeatureCard
+          icon="🔗"
+          title="Public Share Links"
+          description="Every buyer gets a shareable link to their construction timeline. They send it to family and friends — turning excited buyers into your most powerful referral source."
+        />
+        <FeatureCard
+          icon="📊"
+          title="Multi-Home Management"
+          description="One dashboard for every home and community. Assign team members, track updates, and keep every buyer informed — whether you build 10 homes or 500."
+        />
+      </div>
+
+      <div class="text-center">
+        <a href="/demo" class="text-accent font-semibold hover:text-orange-700 transition-colors">
+          Ready to see it in action? →{' '}
+          <span class="underline underline-offset-2">Book a Demo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="py-20 px-6 bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2
+            class="font-heading text-3xl md:text-4xl font-bold text-white leading-tight mb-6"
+          >
+            Your Buyers Deserve Better Than Email Threads and Silence.
+          </h2>
+          <p class="text-white/75 text-lg leading-relaxed mb-6">
+            The builders earning the best reviews and the most referrals aren't doing anything
+            magical — they're keeping their buyers informed. Home Builder Portal makes that easy
+            for your team and unforgettable for your buyers.
+          </p>
+          <p class="text-white/45 text-sm">
+            No commitment required. Just a 30-minute look at what your team and your buyers would
+            actually experience.
+          </p>
+        </div>
+        <div>
+          <DemoForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
