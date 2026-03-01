@@ -4,7 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Status
 
-**Pre-development.** The only file currently in this repository is `HomeBuilderPortal-Marketing-Website-PRD.md`. No framework, build tooling, or code exists yet. When a framework is chosen, update this file with build/dev/test commands.
+**Built and ready to deploy.** Astro 5 + Tailwind CSS v4. Initial commit on `main`. Push to GitHub, then connect to Cloudflare Pages.
+
+## Build / Dev Commands
+
+```bash
+npm run dev       # local dev server
+npm run build     # production build → dist/
+npm run preview   # preview dist/ locally
+```
+
+## Deploy Target
+
+Cloudflare Pages — Build command: `npm run build` | Output: `dist`
 
 ## What This Project Is
 

@@ -4,7 +4,17 @@ import DemoForm from '../components/DemoForm.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 import HowItWorksStep from '../components/HowItWorksStep.astro';
 import { Image } from 'astro:assets';
-import heroImage from '../assets/hero.jpg';
+import heroImage from '../assets/img-family-moving-in.png';
+import roofFraming from '../assets/roof-framing.jpg';
+import houseFramingExterior from '../assets/house-framing-exterior.jpg';
+import kitchenFinishedGray from '../assets/kitchen-finished-gray.jpg';
+import framingInterior from '../assets/framing-interior.jpg';
+import imgFinishedHomePorch from '../assets/img-6.png';
+import imgWorkerDrywall from '../assets/img-worker-drywall.png';
+import imgCoupleKeys from '../assets/img-couple-keys.png';
+import imgCouplePhone from '../assets/img-couple-phone.png';
+import imgFinishedHouse from '../assets/img-finished-house.png';
+import imgWorkerKitchen from '../assets/img-worker-kitchen.png';
 ---
 
 <BaseLayout
@@ -12,29 +22,17 @@ import heroImage from '../assets/hero.jpg';
   description="Home Builder Portal is the branded communication platform that keeps homebuyers informed and excited during construction — without adding work to your team. Book a demo."
 >
   <!-- ═══ HERO ═══ -->
-  <section class="relative min-h-[88vh] flex items-center overflow-hidden bg-primary">
-    <!-- Background image with overlay -->
-    <div class="absolute inset-0">
-      <Image
-        src={heroImage}
-        alt="New home under construction"
-        class="w-full h-full object-cover object-center"
-        width={1920}
-        height={1080}
-        loading="eager"
-        quality={85}
-      />
-      <div class="absolute inset-0 bg-primary/75"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40">
-      </div>
-    </div>
-
-    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
-      <div class="max-w-2xl">
+  <section class="bg-primary overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 min-h-[88vh]">
+      <!-- Left: Text -->
+      <div class="flex flex-col justify-center py-20 lg:py-28 pr-0 lg:pr-12">
+        <p class="text-white/80 text-2xl md:text-3xl font-semibold mb-3">
+          You Build Homes They'll Love.
+        </p>
         <h1
           class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
         >
-          Build Homes They'll Love. Create Experiences They'll Talk About.
+          Create Experiences They'll Talk About.
         </h1>
         <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-4">
           The best builders know that a great home isn't just built — it's experienced. Home
@@ -61,6 +59,19 @@ import heroImage from '../assets/hero.jpg';
           </a>
         </div>
       </div>
+
+      <!-- Right: Photo, no overlay, full image shown -->
+      <div class="hidden lg:flex items-center -mr-6">
+        <Image
+          src={heroImage}
+          alt="New home under construction"
+          class="w-full h-auto"
+          width={960}
+          height={640}
+          loading="eager"
+          quality={85}
+        />
+      </div>
     </div>
   </section>
 
@@ -78,7 +89,15 @@ import heroImage from '../assets/hero.jpg';
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- For Your Team -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <Image
+            src={imgWorkerDrywall}
+            alt="Builder team member working on site"
+            class="w-full h-52 object-cover object-top"
+            width={700}
+            height={420}
+          />
+          <div class="p-8">
           <div
             class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5"
             aria-hidden="true"
@@ -101,38 +120,48 @@ import heroImage from '../assets/hero.jpg';
             of who posts. Admins manage every home and community from a single dashboard. No extra
             calls. No chasing down updates. Just one post that does the work for everyone.
           </p>
+          </div>
         </div>
 
         <!-- For Your Buyers -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-          <div
-            class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-5"
-            aria-hidden="true"
-          >
-            <svg
-              class="w-6 h-6 text-primary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <Image
+            src={imgCoupleKeys}
+            alt="Happy couple holding keys to their new home"
+            class="w-full h-52 object-cover"
+            width={700}
+            height={420}
+          />
+          <div class="p-8">
+            <div
+              class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-5"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-              ></path>
-            </svg>
+              <svg
+                class="w-6 h-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-primary mb-3">
+              A polished experience that earns 5-star reviews.
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Buyers log into a branded portal — your logo, your colors — and see exactly what's
+              happening with their home in real time. A visual construction timeline, milestone
+              photos, important documents, and a shareable link so they can show off their new home
+              to everyone they know. Informed buyers are excited buyers. Excited buyers write great
+              reviews.
+            </p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-primary mb-3">
-            A polished experience that earns 5-star reviews.
-          </h3>
-          <p class="text-gray-600 leading-relaxed">
-            Buyers log into a branded portal — your logo, your colors — and see exactly what's
-            happening with their home in real time. A visual construction timeline, milestone
-            photos, important documents, and a shareable link so they can show off their new home
-            to everyone they know. Informed buyers are excited buyers. Excited buyers write great
-            reviews.
-          </p>
         </div>
       </div>
     </div>
@@ -150,22 +179,82 @@ import heroImage from '../assets/hero.jpg';
         </h2>
       </div>
 
-      <div class="max-w-2xl mx-auto flex flex-col gap-12">
-        <HowItWorksStep
-          number={1}
-          title="Your team posts an update"
-          description="From the job site or the office, any team member snaps a photo, adds a quick caption using a pre-built template, and taps post. Done in under a minute."
-        />
-        <HowItWorksStep
-          number={2}
-          title="Your buyers see it instantly"
-          description="Buyers open their branded portal to find a real-time update on their home's progress — photos, milestone markers, and any important documents you've shared."
-        />
-        <HowItWorksStep
-          number={3}
-          title="Buyers share. Referrals grow."
-          description="Every buyer gets a public share link for their construction timeline. They send it to family, friends, and coworkers. Those shares become warm introductions to your brand — at the moment a buyer's excitement is at its peak."
-        />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <Image
+            src={roofFraming}
+            alt="Roof framing under construction against a blue sky"
+            class="w-full h-52 object-cover"
+            width={600}
+            height={400}
+          />
+          <div class="p-6">
+            <div
+              class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-4"
+            >
+              1
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary mb-2">
+              Your team posts an update
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              From the job site or the office, any team member snaps a photo, adds a quick caption
+              using a pre-built template, and taps post. Done in under a minute.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <Image
+            src={imgCouplePhone}
+            alt="Couple on couch looking at phone to check home progress"
+            class="w-full h-52 object-cover object-top"
+            width={600}
+            height={400}
+          />
+          <div class="p-6">
+            <div
+              class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-4"
+            >
+              2
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary mb-2">
+              Your buyers see it instantly
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Buyers open their branded portal to find a real-time update on their home's progress
+              — photos, milestone markers, and any important documents you've shared.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <Image
+            src={kitchenFinishedGray}
+            alt="Beautiful finished kitchen with gray cabinets"
+            class="w-full h-52 object-cover"
+            width={600}
+            height={400}
+          />
+          <div class="p-6">
+            <div
+              class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-4"
+            >
+              3
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary mb-2">
+              Buyers share. Referrals grow.
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Every buyer gets a public share link for their construction timeline. They send it to
+              family, friends, and coworkers. Those shares become warm introductions to your brand
+              — at the moment a buyer's excitement is at its peak.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -221,6 +310,40 @@ import heroImage from '../assets/hero.jpg';
           <span class="underline underline-offset-2">Book a Demo</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ PHOTO STRIP ═══ -->
+  <section class="py-8 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <Image
+        src={framingInterior}
+        alt="Open interior home framing with natural light"
+        class="rounded-2xl w-full h-60 object-cover"
+        width={600}
+        height={480}
+      />
+      <Image
+        src={imgWorkerKitchen}
+        alt="Worker installing kitchen cabinets in new home"
+        class="rounded-2xl w-full h-60 object-cover object-top"
+        width={600}
+        height={480}
+      />
+      <Image
+        src={imgFinishedHouse}
+        alt="Beautiful finished new home exterior"
+        class="rounded-2xl w-full h-60 object-cover"
+        width={600}
+        height={480}
+      />
+      <Image
+        src={imgFinishedHomePorch}
+        alt="Finished home with cedar shake exterior and welcoming front porch"
+        class="rounded-2xl w-full h-60 object-cover"
+        width={600}
+        height={480}
+      />
     </div>
   </section>
 
